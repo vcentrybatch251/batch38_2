@@ -15,7 +15,7 @@ print("----------------------Pre - env - setup--------------------------")
 #sc=SparkContext(appName="Batch 38 first app", master="local[*]") # 8 (all avialble cores) - RDD - single session
 #spark=SparkSession.builder.appName("batch 38 first df").master("local[*]").getOrCreate() - DF - multi session
 
-spark=SparkSession.builder.appName("batch 38 first df").master("local[*]").getOrCreate()
+spark=SparkSession.builder.appName("batch 38 UDF").master("local[*]").getOrCreate()
 
 df=spark.read.format("csv").option("header","true").option("inferSchema","true").load(r"C:\Users\Admin\PythonProject\PythonProject\Batch38\files\supermarket.csv")
 df.show()
